@@ -111,7 +111,9 @@
         font-family: 'Satisfy', cursive;
     }
 
-    p {
+    p,
+    ul,
+    ol {
         font-family: 'Pompiere', cursive;
         font-size: 20px;
     }
@@ -137,6 +139,10 @@
     .sessaoReceitaPrevia {
         text-align: center;
     }
+
+    .sessaoReceitaIntro {
+        text-align: center;
+    }
     </style>
 </head>
 
@@ -145,10 +151,69 @@
         <div class="site-name">Amigo-Rumis</div>
     </header>
     <main>
-        <h1>Foquinha</h1>
-        <amp-img alt="Foquinha" src="../assets/img/amigurumi-1-perfil.jpg" width="360" height="360"></amp-img>
-        <p>Dificuldade: Fácil</p>
-        <p>FÁCIL BICHINHO FOCA</p>
+        <div class="sessaoReceitaIntro">
+            <h1 style="text-align: center">Foquinha</h1>
+            <amp-img alt="Foquinha" src="../assets/img/amigurumi-1-perfil.jpg" width="360" height="360"></amp-img>
+            <p>Dificuldade: Fácil | Tempo: 3 horas</p>
+            <div class="sessaoTags">
+                <button class="tag">FÁCIL</button>
+                <button class="tag">BICHINHOS</button>
+                <button class="tag">FOCA</button>
+                <button class="tag">AQUÁTICO</button>
+            </div>
+        </div>
+        <div class="sessaoReceitaMateriais">
+            <h2>Materiais</h2>
+            <p>
+                <ul>
+                    <li>Vanna’s Choice yarn in White, Linen (a soft gray), Silver Blue (a pale blue), and Charcoal Gray (dark gray for nose)</li>
+                    <li>12mm black safety eyes</li>
+                    <li>USD3/3.25mm crochet hook</li>
+                    <li>yarn needle</li>
+                    <li>fiber fill</li>
+                    <li>black embroidery thread for whiskers</li>
+                </ul>
+            </p>
+        </div>
+        <div class="sessaoReceitaPreparacao">
+            <h2>Preparação</h2>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #01: Head</h3>
+                <p>use white yarn</p>
+                <ol>
+                    <li>Rnd 1: make 6sc in a magic ring</li>
+                    <li>Rnd 2: inc in each st [12]</li>
+                    <li>Rnd 3: (sc, inc in next st) repeat around [18]</li>
+                    <li>Rnd 4: (2sc, inc into next st) repeat around [24]</li>
+                    <li>Rnd 5: sc around [24]</li>
+                    <li>Rnd 6: (3sc, inc into next st) repeat around [30]</li>
+                    <li>Rnd 7: (4sc, inc into next st) repeat around [36]</li>
+                    <li>Rnd 8: (5sc, inc into next st) repeat around [42]</li>
+                    <li>Rnd 9: (6sc, inc into next st) repeat around [48]</li>
+                    <li>Rnd 10: sc around [48]</li>
+                    <li>Rnd 11: (7sc, inc into next st) repeat around [54]</li>
+                    <li>Rnd 12-17: sc around [54]</li>
+                    <li>Rnd 18: (7sc, dec) repeat around [48]</li>
+                    <li>Rnd 19: sc around [48]</li>
+                    <li>Rnd 20: (6sc, dec) repeat around [42]</li>
+                    <li>Rnd 21: (5sc, dec) repeat around [36]</li>
+                    <li>Rnd 22: (4sc, dec) repeat around [30]</li>
+                    <li>Rnd 23: (3sc, dec) repeat around [24]</li>
+                    <li>Fasten off</li>
+                </ol>
+                <amp-img alt="Foquinha - Passo #01 - Head e Muzzle" src="../assets/img/amigurumi-1-receita-passo-1.jpg" width="640" height="427"></amp-img>
+            </div>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #02: Muzzle</h3>
+                <ol>
+                    <li>Rnd 1: make 6sc in a magic ring</li>
+                    <li>Rnd 2: inc in each st [12]</li>
+                    <li>Rnd 3: (sc, inc in next st) repeat around [18]</li>
+                    <li>Rnd 4: (2sc, inc in next st) repeat around [24]</li>
+                    <li>Fasten off and leave a tail for attaching to head</li>
+                </ol>
+            </div>
+        </div>
     </main>
 </body>
 
