@@ -96,7 +96,7 @@
     .site-name {
         margin: auto;
         font-family: 'Satisfy', cursive;
-        font-size: 36px;
+        font-size: 32px;
     }
 
     main {
@@ -113,6 +113,29 @@
 
     p {
         font-family: 'Pompiere', cursive;
+        font-size: 20px;
+    }
+
+    button {
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 5px 5px;
+    }
+
+    .tag {
+        background-color: #EEEEEE;
+    }
+
+    .sessaoTags {
+        margin: 5px;
+    }
+
+    .sessaoReceitaPrevia {
+        text-align: center;
     }
     </style>
 </head>
@@ -122,16 +145,23 @@
         <div class="site-name">Amigo-Rumis</div>
     </header>
     <main>
-        <h1>Receitas</h1>
+        <h1 style="text-align: center">Bem-vindos ao site Amigo-Rumis!</h1>
         <h2>Conteúdos do site</h2>
         <p><a href="receitas">Receitas</a></p>
         <p><a href="tutoriais">Tutoriais</a></p>
         <h2>Últimas receitas</h2>
-        <div>
+        <div class="sessaoReceitaPrevia">
             <a href="receitas/1-foquinha.html">
-                <p>Foquinha</p>
-                <p>Dificuldade: Fácil</p>
-                <p>FÁCIL BICHINHO FOCA</p>
+                <p>FOQUINHA</p>
+            </a>
+            <p>Dificuldade: Fácil | Tempo: 3 horas</p>
+            <div class="sessaoTags">
+                <button class="tag">FÁCIL</button>
+                <button class="tag">BICHINHOS</button>
+                <button class="tag">FOCA</button>
+                <button class="tag">AQUÁTICO</button>
+            </div>
+            <a href="receitas/1-foquinha.html">
                 <amp-img alt="Foquinha" src="assets/img/amigurumi-1-perfil.jpg" width="360" height="360">
                 </amp-img>
             </a>
