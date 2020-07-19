@@ -159,6 +159,9 @@
         background-color: #f5f5dc;
         padding: 10px;
     }
+    .receitaPreviaNome{
+        text-transform: uppercase;
+    }
     </style>
 </head>
 
@@ -172,29 +175,29 @@
     </header>
     <main>
         <h1>Receitas</h1>
-        <div class="sessaoReceitaPrevia">
-            <a href="1-foquinha.html">
-                <p>FOQUINHA</p>
-            </a>
-            <p>Dificuldade: Fácil | Tempo: 3 horas</p>
-            <div class="sessaoTags">
-                <button class="tag">FÁCIL</button>
-                <button class="tag">BICHINHOS</button>
-                <button class="tag">FOCA</button>
-                <button class="tag">AQUÁTICO</button>
-            </div>
-            <a href="1-foquinha.html">
-                <amp-img alt="Foquinha" src="../assets/img/amigurumi-1-perfil.jpg" width="360" height="360">
-                </amp-img>
-            </a>
-        </div>
         <div>
-            <amp-list layout="fixed-height" width="auto" height="300" src="../assets/database/receitas.json">
+            <amp-list layout="fixed-height" width="auto" height="1500" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json" load-more="manual">
                 <template type="amp-mustache">
                     <div class="sessaoReceitaPrevia">
-                        <a href="{{url}}">{{nome}}</a>
+                        <a href="{{url}}">
+                            <p class="receitaPreviaNome">{{nome}}</p>
+                        </a>
+                        <p>Dificuldade: {{dificuldade}} | Tempo: {{tempo}} horas</p>
+                        <div class="sessaoTags">
+                            {{#tags}}
+                            <button class="tag">{{.}}
+                            </button>
+                            {{/tags}}
+                        </div>
+                        <a href={{url}}>
+                            <amp-img alt="{{nome}}" src="../assets/img/{{imagens.0}}" width="360" height="360">
+                            </amp-img>
+                        </a>
                     </div>
                 </template>
+                <amp-list-load-more load-more-button>
+                    <button>Mais receitas</button>
+                </amp-list-load-more>
             </amp-list>
         </div>
     </main>
