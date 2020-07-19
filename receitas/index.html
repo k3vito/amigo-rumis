@@ -176,27 +176,30 @@
     <main>
         <h1>Receitas</h1>
         <div>
-            <amp-list layout="fixed-height" width="auto" height="1500" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json" load-more="manual">
-                <template type="amp-mustache">
-                    <div class="sessaoReceitaPrevia">
-                        <a href="{{url}}">
-                            <p class="receitaPreviaNome">{{nome}}</p>
-                        </a>
-                        <p>Dificuldade: {{dificuldade}} | Tempo: {{tempo}} horas</p>
-                        <div class="sessaoTags">
-                            {{#tags}}
-                            <button class="tag">{{.}}
-                            </button>
-                            {{/tags}}
-                        </div>
-                        <a href={{url}}>
-                            <amp-img alt="{{nome}}" src="../assets/img/{{imagens.0}}" width="360" height="360">
-                            </amp-img>
-                        </a>
-                    </div>
-                </template>
+            <amp-list load-more="manual" layout="fixed-height" width="auto" height="700" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json">
                 <amp-list-load-more load-more-button>
+                    <template type="amp-mustache">
+                        <div class="sessaoReceitaPrevia">
+                            <a href="{{url}}">
+                                <p class="receitaPreviaNome">{{nome}}</p>
+                            </a>
+                            <p>Dificuldade: {{dificuldade}} | Tempo: {{tempo}} horas</p>
+                            <div class="sessaoTags">
+                                {{#tags}}
+                                <button class="tag">{{.}}
+                                </button>
+                                {{/tags}}
+                            </div>
+                            <a href={{url}}>
+                                <amp-img alt="{{nome}}" src="../assets/img/{{imagens.0}}" width="360" height="360">
+                                </amp-img>
+                            </a>
+                        </div>
+                    </template>
                     <button>Mais receitas</button>
+                </amp-list-load-more>
+                <amp-list-load-more load-more-failed>
+                    <button>Unable to Load More</button>
                 </amp-list-load-more>
             </amp-list>
         </div>
