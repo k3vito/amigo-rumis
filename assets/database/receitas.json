@@ -1,0 +1,21 @@
+{
+    "receitas": [
+    {
+        "id": 1,
+        "nome": "Foquinha (Sammy, The Seal)",
+        "url": "1-foquinha.html",
+        "dificuldade": "Fácil",
+        "tempo": 3,
+        "tags": ["Bichinhos", "Foca", "Aquático"],
+        "imagens": ["amigurumi-1-perfil.jpg"]
+    },
+    {
+        "id": 2,
+        "nome": "Mickey",
+        "url": "2-mickey.html",
+        "dificuldade": "Fácil",
+        "tempo": 2,
+        "tags": ["Bichinhos", "Mickey", "Disney", "Rato"],
+        "imagens": ["amigurumi-2-perfil.jpg"]
+    }]
+}
