@@ -148,6 +148,10 @@
 
     .sessaoReceitaPrevia {
         text-align: center;
+        width: 300px;
+        height: 600px;
+        display: inline-block;
+        padding: 5px;
     }
 
     .sessaoReceitaIntro {
@@ -176,25 +180,25 @@
     <main>
         <h1>Receitas</h1>
         <div>
-            <amp-list load-more="auto" layout="fixed-height" width="auto" height="800" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json">
-                    <template type="amp-mustache">
-                        <div class="sessaoReceitaPrevia">
-                            <a href="{{url}}">
-                                <p class="receitaPreviaNome">{{nome}}</p>
-                            </a>
-                            <p>Dificuldade: {{dificuldade}} | Tempo: {{tempo}} horas</p>
-                            <div class="sessaoTags">
-                                {{#tags}}
-                                <button class="tag">{{.}}
-                                </button>
-                                {{/tags}}
-                            </div>
-                            <a href={{url}}>
-                                <amp-img alt="{{nome}}" src="../assets/img/{{imagens.0}}" width="360" height="360">
-                                </amp-img>
-                            </a>
+            <amp-list id="listaReceitas" load-more="auto" layout="fixed-height" width="auto" height="800" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json" reset-on-refresh="always">
+                <template type="amp-mustache">
+                    <div class="sessaoReceitaPrevia">
+                        <a href="{{url}}">
+                            <p class="receitaPreviaNome">{{nome}}</p>
+                        </a>
+                        <p>Dificuldade: {{dificuldade}} | Tempo: {{tempo}} horas</p>
+                        <div class="sessaoTags">
+                            {{#tags}}
+                            <button class="tag">{{.}}
+                            </button>
+                            {{/tags}}
                         </div>
-                    </template>
+                        <a href={{url}}>
+                            <amp-img alt="{{nome}}" src="../assets/img/{{imagens.0}}" width="360" height="360" layout="responsive">
+                            </amp-img>
+                        </a>
+                    </div>
+                </template>
             </amp-list>
         </div>
     </main>
