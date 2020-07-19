@@ -166,6 +166,9 @@
     .receitaPreviaNome{
         text-transform: uppercase;
     }
+    .sessaoReceitaLista{
+        text-align: center;
+    }
     </style>
 </head>
 
@@ -180,7 +183,7 @@
     <main>
         <h1>Receitas</h1>
         <div>
-            <amp-list id="listaReceitas" load-more="auto" layout="fixed-height" width="auto" height="800" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json" reset-on-refresh="always">
+            <amp-list class="sessaoReceitaLista" load-more="auto" layout="fixed-height" width="auto" height="800" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json" reset-on-refresh="always">
                 <template type="amp-mustache">
                     <div class="sessaoReceitaPrevia">
                         <a href="{{url}}">
