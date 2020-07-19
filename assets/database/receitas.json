@@ -15,7 +15,7 @@
         "url": "2-mickey.html",
         "dificuldade": "Fácil",
         "tempo": 2,
-        "tags": ["Bichinhos", "Mickey", "Disney", "Rato"],
+        "tags": ["Bichinhos", "Mickey", "Disney"],
         "imagens": ["amigurumi-2-perfil.jpg"]
     },
     {
@@ -24,7 +24,43 @@
         "url": "3-pikachu.html",
         "dificuldade": "Fácil",
         "tempo": 2,
-        "tags": ["Pokémon", "Pikachu", "Game", "Anime", "Rato"],
+        "tags": ["Pokémon", "Pikachu", "Game", "Anime"],
         "imagens": ["amigurumi-3-perfil.jpg"]
-    } ]
+    },
+    {
+        "id": 4,
+        "nome": "Charmander",
+        "url": "4-charmander.html",
+        "dificuldade": "Fácil",
+        "tempo": 2,
+        "tags": ["Pokémon", "Charmander", "Game", "Anime"],
+        "imagens": ["amigurumi-4-perfil.jpg"]
+    },
+    {
+        "id": 5,
+        "nome": "Squirtle",
+        "url": "5-squirtle.html",
+        "dificuldade": "Fácil",
+        "tempo": 2,
+        "tags": ["Pokémon", "Squirtle", "Game", "Anime"],
+        "imagens": ["amigurumi-5-perfil.jpg"]
+    },
+    {
+        "id": 6,
+        "nome": "Eevee",
+        "url": "6-eevee.html",
+        "dificuldade": "Fácil",
+        "tempo": 2,
+        "tags": ["Pokémon", "Eevee", "Game", "Anime"],
+        "imagens": ["amigurumi-6-perfil.jpg"]
+    },
+    {
+        "id": 7,
+        "nome": "Minnie",
+        "url": "7-Minnie.html",
+        "dificuldade": "Fácil",
+        "tempo": 2,
+        "tags": ["Bichinhos", "Minnie", "Disney", "Rato"],
+        "imagens": ["amigurumi-7-perfil.jpg"]
+    }]
 }
