@@ -17,7 +17,7 @@
         "tempo": 2,
         "tags": ["Bichinhos", "Mickey", "Disney", "Rato"],
         "imagens": ["amigurumi-2-perfil.jpg"]
-    }
+    },
     {
         "id": 3,
         "nome": "Pikachu",
@@ -26,5 +26,5 @@
         "tempo": 2,
         "tags": ["Pokémon", "Pikachu", "Game", "Anime", "Rato"],
         "imagens": ["amigurumi-3-perfil.jpg"]
-    }, ]
+    } ]
 }
