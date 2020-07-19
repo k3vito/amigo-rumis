@@ -176,8 +176,7 @@
     <main>
         <h1>Receitas</h1>
         <div>
-            <amp-list load-more="manual" layout="fixed-height" width="auto" height="700" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json">
-                <amp-list-load-more load-more-button>
+            <amp-list load-more="auto" layout="fixed-height" width="auto" height="800" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json">
                     <template type="amp-mustache">
                         <div class="sessaoReceitaPrevia">
                             <a href="{{url}}">
@@ -196,11 +195,6 @@
                             </a>
                         </div>
                     </template>
-                    <button>Mais receitas</button>
-                </amp-list-load-more>
-                <amp-list-load-more load-more-failed>
-                    <button>Unable to Load More</button>
-                </amp-list-load-more>
             </amp-list>
         </div>
     </main>
