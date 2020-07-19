@@ -17,5 +17,14 @@
         "tempo": 2,
         "tags": ["Bichinhos", "Mickey", "Disney", "Rato"],
         "imagens": ["amigurumi-2-perfil.jpg"]
-    }]
+    }
+    {
+        "id": 3,
+        "nome": "Pikachu",
+        "url": "3-pikachu.html",
+        "dificuldade": "Fácil",
+        "tempo": 2,
+        "tags": ["Pokémon", "Pikachu", "Game", "Anime", "Rato"],
+        "imagens": ["amigurumi-2-perfil.jpg"]
+    }, ]
 }
