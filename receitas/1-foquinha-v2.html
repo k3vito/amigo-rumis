@@ -1,0 +1,441 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Foquinha | Amigo-Rumis</title>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <link rel="canonical" href="https://k3vito.github.io/amigo-rumis/receitas/1-foquinha.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <!---Google Fonts--->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Pompiere&family=Satisfy&family=Sofia&display=swap" rel="stylesheet">
+    <style amp-boilerplate>
+    body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+
+        to {
+            visibility: visible
+        }
+    }
+
+    @-moz-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+
+        to {
+            visibility: visible
+        }
+    }
+
+    @-ms-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+
+        to {
+            visibility: visible
+        }
+    }
+
+    @-o-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+
+        to {
+            visibility: visible
+        }
+    }
+
+    @keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+
+        to {
+            visibility: visible
+        }
+    }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+        body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none
+        }
+        </style>
+    </noscript>
+    <style amp-custom>
+    .home-button {
+        margin-top: 8px;
+    }
+
+    .headerbar {
+        text-align: center;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background: #ffd1dc;
+    }
+
+    .site-name {
+        margin: auto;
+        font-family: 'Pacifico', cursive;
+        font-size: 24px;
+    }
+
+    .site-subtitulo {
+        margin: auto;
+        font-family: 'Satisfy', cursive;
+        font-size: 18px;
+    }
+
+    main {
+        margin-top: 60px;
+        padding: 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Sofia', cursive;
+    }
+
+    p,
+    ul,
+    ol {
+        font-family: 'Pompiere', cursive;
+        font-size: 20px;
+    }
+
+    li {
+        margin-bottom: 12px;
+    }
+
+    button {
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 5px 5px;
+    }
+
+    .tag {
+        background-color: #eeeeee;
+    }
+
+    .sessaoTags {
+        margin: 5px;
+    }
+
+    .sessaoReceitaPrevia {
+        text-align: center;
+    }
+
+    .sessaoReceitaIntro {
+        text-align: center;
+    }
+
+    footer {
+        text-align: center;
+        background-color: #f5f5dc;
+        padding: 10px;
+    }
+
+    amp-img {
+        margin: auto;
+    }
+
+    .sessaoReceitaIntroImagem {
+        max-width: 600px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .sessaoReceitaPreparacaoPassoImagem {
+        max-width: 600px;
+        margin: auto;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <header class="headerbar">
+        <a href="https://k3vito.github.io/amigo-rumis/">
+            <div class="site-name">Amigo-Rumis</div>
+            <div class="site-subtitulo">Um site pra você encontrar as melhores receitas</div>
+            </div>
+        </a>
+    </header>
+    <main>
+
+
+
+
+        <div>
+            <amp-list class="sessaoReceitaLista" load-more="auto" layout="fixed-height" width="auto" height="800" src="C:/Users/Shibata/Documents/GitHub/amigo-rumis/assets/database" reset-on-refresh="always">
+                <template type="amp-mustache">
+                    <div class="sessaoReceitaPrevia">
+                        <a href="{{url}}">
+                            <p class="receitaPreviaNome">{{nome}}</p>
+                        </a>
+                        <p>Dificuldade: {{dificuldade}} | Tempo: {{tempo}} horas</p>
+                        <div class="sessaoTags">
+                            {{#tags}}
+                            <button class="tag">{{.}}
+                            </button>
+                            {{/tags}}
+                        </div>
+                        <a href={{url}}>
+                            <amp-img alt="{{nome}}" src="../assets/img/{{imagens.0}}" width="360" height="360" layout="responsive">
+                            </amp-img>
+                        </a>
+                    </div>
+                </template>
+            </amp-list>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="sessaoReceitaIntro">
+            <h1 style="text-align: center">Foquinha (Sammy, the Seal)</h1>
+            <p>Criado por: <a href="http://www.littlemuggles.com/free-patterns-3/sammy-the-seal/">Little Muggles</a></p>
+            <div class="sessaoReceitaIntroImagem">
+                <amp-img alt="Foquinha" src="../assets/img/amigurumi-1-perfil.jpg" width="360" height="360" layout="responsive"></amp-img>
+            </div>
+            <p>Dificuldade: Fácil | Tempo: 3 horas</p>
+            <div class="sessaoTags">
+                <button class="tag">FÁCIL</button>
+                <button class="tag">BICHINHOS</button>
+                <button class="tag">FOCA</button>
+                <button class="tag">AQUÁTICO</button>
+            </div>
+        </div>
+        <div class="sessaoReceitaMateriais">
+            <h2>Materiais</h2>
+            <p>
+                <ul>
+                    <li>Vanna’s Choice yarn in White, Linen (a soft gray), Silver Blue (a pale blue), and Charcoal Gray (dark gray for nose)</li>
+                    <li>12mm black safety eyes</li>
+                    <li>USD3/3.25mm crochet hook</li>
+                    <li>yarn needle</li>
+                    <li>fiber fill</li>
+                    <li>black embroidery thread for whiskers</li>
+                </ul>
+            </p>
+        </div>
+        <div class="sessaoReceitaPreparacao">
+            <h2>Preparação</h2>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #01: Head</h3>
+                <p>use white yarn</p>
+                <ol>
+                    <li>Rnd 1: make 6sc in a magic ring</li>
+                    <li>Rnd 2: inc in each st [12]</li>
+                    <li>Rnd 3: (sc, inc in next st) repeat around [18]</li>
+                    <li>Rnd 4: (2sc, inc into next st) repeat around [24]</li>
+                    <li>Rnd 5: sc around [24]</li>
+                    <li>Rnd 6: (3sc, inc into next st) repeat around [30]</li>
+                    <li>Rnd 7: (4sc, inc into next st) repeat around [36]</li>
+                    <li>Rnd 8: (5sc, inc into next st) repeat around [42]</li>
+                    <li>Rnd 9: (6sc, inc into next st) repeat around [48]</li>
+                    <li>Rnd 10: sc around [48]</li>
+                    <li>Rnd 11: (7sc, inc into next st) repeat around [54]</li>
+                    <li>Rnd 12-17: sc around [54]</li>
+                    <li>Rnd 18: (7sc, dec) repeat around [48]</li>
+                    <li>Rnd 19: sc around [48]</li>
+                    <li>Rnd 20: (6sc, dec) repeat around [42]</li>
+                    <li>Rnd 21: (5sc, dec) repeat around [36]</li>
+                    <li>Rnd 22: (4sc, dec) repeat around [30]</li>
+                    <li>Rnd 23: (3sc, dec) repeat around [24]</li>
+                    <li>Fasten off</li>
+                </ol>
+                <div class="sessaoReceitaPreparacaoPassoImagem">
+                    <amp-img alt="Foquinha - Head e Muzzle" src="../assets/img/amigurumi-1-receita-imagem-1.jpg" width="640" height="427" layout="responsive"></amp-img>
+                    <p>Head and Muzzle complete!</p>
+                </div>
+            </div>
+            <div class="sessaoReceitaPreparacaoPassoImagem">
+                <amp-img alt="Foquinha - Nose" src="../assets/img/amigurumi-1-receita-imagem-2.jpg" width="640" height="427" layout="responsive"></amp-img>
+                <p>Sew the nose on with charcoal yarn. Tie a tight knot on the back side.</p>
+            </div>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #02: Muzzle</h3>
+                <ol>
+                    <li>Rnd 1: make 6sc in a magic ring</li>
+                    <li>Rnd 2: inc in each st [12]</li>
+                    <li>Rnd 3: (sc, inc in next st) repeat around [18]</li>
+                    <li>Rnd 4: (2sc, inc in next st) repeat around [24]</li>
+                    <li>Fasten off and leave a tail for attaching to head</li>
+                </ol>
+            </div>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #03: Body</h3>
+                <p>use white yarn</p>
+                <ol>
+                    <li>Rnd 5: (3sc, inc into next st) repeat around [30]</li>
+                    <li>Rnd 6: (4sc, inc into next st) repeat around [36]</li>
+                    <li>Rnd 7: sc around [36]</li>
+                    <li>Rnd 8: (5sc, inc into next st) repeat around [42]</li>
+                    <li>Rnd 9: (6sc, inc into next st) repeat around [48]</li>
+                    <li>Rnd 10: (7sc, inc into next st) repeat around [54]</li>
+                    <li>Rnd 11: (8sc, inc into next st) repeat around [60]</li>
+                    <li>Rnd 12-13: sc around [60]</li>
+                    <li>Rnd 14: (8sc, dec) repeat around [54]</li>
+                    <li>Rnd 15: (7sc, dec) repeat around [48]</li>
+                    <li>Rnd 16: sc around [48]</li>
+                    <li>Rnd 17: (6sc, dec) repeat around [42]</li>
+                    <li>Rnd 18: sc around [42]</li>
+                    <li>Rnd 19: (5sc, dec) repeat around [36]</li>
+                    <li>Rnd 20: sc around [36]</li>
+                    <li>Rnd 21: (4sc, dec) repeat around [30]</li>
+                    <li>Rnd 22: (3sc, dec) repeat around [24]</li>
+                    <li>Fasten off and leave a tail</li>
+                </ol>
+                <div class="sessaoReceitaPreparacaoPassoImagem">
+                    <amp-img alt="Foquinha - Body" src="../assets/img/amigurumi-1-receita-imagem-3.jpg" width="640" height="427" layout="responsive"></amp-img>
+                    <p>Pinning your pieces together allows you to get a better picture of the overall look!</p>
+                </div>
+            </div>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #04: Tail</h3>
+                <p>use white yarn and make two</p>
+                <ol>
+                    <li>Rnd 1: make 6sc into magic ring</li>
+                    <li>Rnd 2: (sc, inc in next st) repeat around [9]</li>
+                    <li>Rnd 3: (2sc, inc in next st) repeat around [12]</li>
+                    <li>Rnd 4: (3sc, inc in next st) repeat around [15]</li>
+                    <li>Rnd 5: sc around [15]</li>
+                    <li>Rnd 6: (4sc, inc in next st) repeat around [18]</li>
+                    <li>Rnd 7: (4sc, dec) repeat around [15]</li>
+                    <li>Rnd 8: (3sc, dec) repeat around [12]</li>
+                    <li>Rnd 9: (2sc, dec) repeat around [9]</li>
+                </ol>
+                <p>For the first piece you make, fasten off and cut the yarn.</p>
+                <p>For the second piece, stop after round 9. You will now continue by joining the two pieces together.</p>
+                <ol start="10">
+                    <li>Rnd 10: After completing round 9 on your second piece, insert your hook into a stitch from your first piece. Draw up a loop and yarn through as you would for any single crochet stitch. This will join the two pieces together. Continue crocheting around the newly attached piece and if you keep going all the way around, you should end up with two joined pieces and 18 stitches total by the end of the round.</li>
+                </ol>
+                <div class="sessaoReceitaPreparacaoPassoImagem">
+                    <amp-img alt="Foquinha - Tail" src="../assets/img/amigurumi-1-receita-imagem-4.jpg" width="640" height="427" layout="responsive"></amp-img>
+                    <p>making the tail…</p>
+                </div>
+                <ol start="11">
+                    <li>Rnd 11: 5sc, inc, 7sc, inc, 4sc [20]</li>
+                    <li>Rnd 12: 2sc, dec, 8sc, dec, 5sc [18]</li>
+                    <li>Rnd 13: sc around [18]</li>
+                    <li>Rnd 14: (2sc, inc in next st) repeat around [24]</li>
+                    <li>Rnd 15: (3sc, inc in next st) repeat around [30]</li>
+                    <li>Rnd 16: sc around [30]</li>
+                    <li>Rnd 17: (4sc, inc in next st) repeat around [36]</li>
+                    <li>Rnd 18-19: sc around [36]</li>
+                    <li>Fasten off and leave a long tail</li>
+                </ol>
+                <div class="sessaoReceitaPreparacaoPassoImagem">
+                    <amp-img alt="Foquinha - Tail 2" src="../assets/img/amigurumi-1-receita-imagem-5.jpg" width="640" height="427" layout="responsive"></amp-img>
+                    <p>ready for attaching!</p>
+                </div>
+            </div>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #05: Flipper</h3>
+                <p>use white yarn</p>
+                <ol>
+                    <li>Rnd 1: make 6sc in a magic ring</li>
+                    <li>Rnd 2: inc in each st [12]</li>
+                    <li>Rnd 3-7: sc around [12]</li>
+                    <li>Rnd 8: (2sc, dec) repeat around [9]</li>
+                    <li>Rnd 9-10: sc around [9]</li>
+                    <li>Rnd 11: (2sc, dec) repeat twice, sc [7]</li>
+                    <li>Rnd 12: sc around [7]</li>
+                    <li>Fasten off and leave a long tail</li>
+                </ol>
+            </div>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #06: Hat</h3>
+                <p>start with blue yarn</p>
+                <ol>
+                    <li>Rnd 1: make 6sc in a magic ring</li>
+                    <li>Rnd 2: inc in each st [12]</li>
+                    <li>Rnd 3: (sc, inc in next st) repeat around [18]</li>
+                    <li>Rnd 4: (2sc, inc in next st) repeat around [24]</li>
+                    <li>Rnd 5: sc around [24]</li>
+                    <li>Rnd 6: (3sc, inc in next st) repeat around [30]</li>
+                    <li>Rnd 7: (4sc, inc in next st) repeat around [36]</li>
+                    <li>Rnd 8: (5sc, inc in next st) repeat around [42]</li>
+                </ol>
+                <p>change to white</p>
+                <ol start="9">
+                    <li>Rnd 9: (6sc, inc in next st) repeat around [48]</li>
+                    <li>Rnd 10: (7sc, inc in next st) repeat around [54]</li>
+                    <li>Rnd 11: (8sc, inc in next st) repeat around [60]</li>
+                </ol>
+                <p>change to blue</p>
+                <ol start="12">
+                    <li>Rnd 12: sc around [60]</li>
+                    <li>Rnd 13: chain 2, dc around [60]</li>
+                    <li>Rnd 14: sl st around [60]</li>
+                    <li>Bind off</li>
+                </ol>
+                <div class="sessaoReceitaPreparacaoPassoImagem">
+                    <amp-img alt="Foquinha - Hat" src="../assets/img/amigurumi-1-receita-imagem-6.jpg" width="640" height="427" layout="responsive"></amp-img>
+                    <p>Sammy’s cute pom pom hat!</p>
+                </div>
+                </ol>
+            </div>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #07: Pom Pom</h3>
+                <p>There are many different ways to make pom poms but this is the technique that I used. Feel free to experiment and find out what works best for you!</p>
+                <p>Wind your white yarn around a medium sized dinner fork around 40 times. Use a length of white yarn (about 7 inches) to tie the middle of the bundle together tightly. Slide the fork out and snip the open ends of all the loops. Fluff out the pom pom and trim evenly. You can use the tail ends of the yarn which you used to tie the bundle to now attach the pom pom to the top of the hat! Weave in all yarn ends neatly.</p>
+            </div>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #08: Scarf</h3>
+                <p>Chain 66 in white and 2 in blue yarn [68]</p>
+                <p>Starting into the 3rd chain from the hook, dc across</p>
+                <p>Bind off and weave in your yarn tails</p>
+            </div>
+            <div class="sessaoReceitaPreparacaoPasso">
+                <h3>Passo #09: Montagem</h3>
+                <div class="sessaoReceitaPreparacaoPassoImagem">
+                    <amp-img alt="Foquinha - Assembly" src="../assets/img/amigurumi-1-receita-imagem-7.jpg" width="640" height="427" layout="responsive"></amp-img>
+                    <p>Almost done…</p>
+                </div>
+                <p>Stuff the head and body generously. Place the eyes between rounds 13 and 14 with 10 stitches between them. Sew the nose onto the muzzle and center it between the eyes. Sew the muzzle on neatly and carefully. There is no need to stuff it. Using your black embroidery thread and needle, sew a couple of whiskers onto each side of the face. You can add eyebrows too!</p>
+                <p>The head and the body both have the same number of stitches in the openings so sewing them together should be seamless. You can position the head however you wish. (ie. instead of looking forward, you might face the head towards the side instead…) Next, position the tail against the back of the body and sew it on. You will need to fill the tail with fiber fill before completely attaching it to the body. Try to center the tail so that your seal can sit by itself without toppling.</p>
+                <p>Attach the flippers next. Take note that they are symmetrical.</p>
+                <p>Put the scarf and hat on – you are finished!! I hope you’ve enjoyed making your own baby seal!</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Criado por Roberta e Kevin</p>
+        <p>2020</p>
+    </footer>
+</body>
+
+</html>
