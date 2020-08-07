@@ -482,13 +482,151 @@
         "url": "2-mickey.html",
         "fonte":
         {
-            "criador": "",
-            "link": ""
+            "criador": "Delinlea",
+            "link": "http://delinlea.com/free-pattern-amigurumi-mickey-ufufy/"
         },
         "dificuldade": "Fácil",
         "tempo": 2,
         "tags": ["Bichinhos", "Mickey", "Disney"],
-        "imagens": ["amigurumi-2-perfil.jpg"]
+        "imagens": ["amigurumi-2-perfil.jpg"],
+        "materiais": ["Yarn in the colors;  Brown, Pink, Beige, White and Light Yellow. (I used Budgetyarn.com)", "Crochet Hook (I used a 2,5mm hook)", "Stuffing", "Scissors", "Sewing Pins", "Yarn Needle", "Felt in brown", "(Fabric) Glue"],
+        "passos": [
+        {
+            "nome": "Body",
+            "etapas": [
+            {
+                "tipo": "comentario",
+                "atividade": "Start with the color Brown"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "1: 6SC in magic ring. [6]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "2: 2SC in each ST around. [12]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "3: (1SC, inc) 6 times. [18]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "4: (2SC, inc) 6 times. [24]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "5: 24SC. [24]"
+            },
+            {
+                "tipo": "comentario",
+                "atividade": "From here you will change colors to make the face"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "6: Brown; 11SC, Beige; 2SC, Brown; 2SC, Beige; 2SC, Brown; 7SC. [24]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "7: Brown; (3SC, inc) 2 times, 3SC, (Beige; Inc, 2SC, Brown, 1SC) 2 times, Brown; inc, 3SC, inc. [30]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "8: Brown; 13SC, Beige; 9SC, Brown; 8SC. [30]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "9: Brown; 11SC, Beige; 13SC, Brown; 6SC. [30]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "10: Repeat row 9"
+            },
+            {
+                "tipo": "comentario",
+                "atividade": "Continue with only the Brown color"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "11-14: 11: 30SC. [30]"
+            },
+            {
+                "tipo": "comentario",
+                "atividade": "Change to the color Pink"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "15-17: 30SC. [30]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "18: (3SC, dec) 6 times. [24]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "19: (2SC, dec) 6 times. [18] Stuff the body here"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "20: (1SC, dec) 6 times. [12]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "21: Dec all around. [6]"
+            },
+            {
+                "tipo": "comentario",
+                "atividade": "Fasten off and weave in tail"
+            }]
+        },
+        {
+            "nome": "Ears (make 4)",
+            "etapas": [
+            {
+                "tipo": "comentario",
+                "atividade": "Use the color Brown"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "1: 6SC in Magic Ring. [6]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "2: 2SC in each st around. [12]"
+            },
+            {
+                "tipo": "rnd",
+                "atividade": "3: (1SC, inc) 6 times. [18]"
+            },
+            {
+                "tipo": "comentario",
+                "atividade": "Fasten off and leave a long tail for sewing."
+            },
+            {
+                "tipo": "comentario",
+                "atividade": "Now, sew 2 of the ears to one ear. You don’t need stuffing in between."
+            }]
+        },
+        {
+            "nome": "Montagem",
+            "etapas": [
+            {
+                "tipo": "comentario",
+                "atividade": "For all of my amigurumi’s I use sewing pins to place all of the parts, so I can easily move them around until I am happy with how it looks. Then I will sew it on."
+            },
+            {
+                "tipo": "comentario",
+                "atividade": "First sew on his feet and after his arms. Then sew on his ears, on both sides of his head, about 4rows from the top of the body. Ah, and don’t forget to give him a tail from a piece of yarn."
+            },
+            {
+                "tipo": "comentario",
+                "atividade": "With a piece of white yarn I embroidered the white dots on his pants. From brown felt you will cut his nose and eyes. Glue all those parts on the amigurumi and your Mickey is done! Cute, right?!"
+            },
+            {
+                "tipo": "comentario",
+                "atividade": "I hope you enjoyed today’s pattern, let me know if you made him. I would love to see your work from my patterns. I always get so excited when I see people using something I designed. Have a lovely day everyone!"
+            }]
+        }]
     },
     {
         "id": 3,
