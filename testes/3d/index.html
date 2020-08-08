@@ -4,52 +4,73 @@
     <title>My first three.js app</title>
     <style>
         body {
-        margin: 0;
-    }
+        	margin: 5;
+    	};
 
-    canvas {
-        display: block;
-    }
     </style>
 </head>
 
 <body>
+    <div id="desenho">
+    </div>
     <script type="module">
+        //Importar biblioteca three.js
         import * as THREE from "https://cdn.jsdelivr.net/npm/three@v0.119.1/build/three.module.js";
-import {OrbitControls} from "https://cdn.jsdelivr.net/npm/three@v0.119.1/examples/jsm/controls/OrbitControls.js";
+		import {OrbitControls} from "https://cdn.jsdelivr.net/npm/three@v0.119.1/examples/jsm/controls/OrbitControls.js";
 
+		//Criar funções
+		function iniciarRenderizador(){
 			var renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
+			renderer.setSize(300,500);
+			document.getElementById("desenho").appendChild(renderer.domElement);
+			return renderer;
+		};
 
+		function criarCena(){
 			var scene = new THREE.Scene();
-
 			scene.background = new THREE.Color( 0xeeeeee );
-
-
-			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-			var controls = new OrbitControls( camera, renderer.domElement );
-
-			camera.position.set( 0, 1, 0 );
-
 			var spotLight = new THREE.SpotLight(0xffffff);
 			spotLight.position.set(-100, 100, 0);
 			scene.add(spotLight);
+			return scene;
+		};
 
-			var geometry = new THREE.CylinderGeometry( 1, 1, 0.1, 32 );
+		function criarCamera(){
+			var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+			camera.position.set(0,1,5);
+			return camera;
+		};
+
+		function criarControleCamera(renderer,camera){
+			var controls = new OrbitControls(camera,renderer.domElement);
+		};
+
+		function criarCilindro(scene,radius,height) {
+			var geometry = new THREE.CylinderGeometry(radius,radius,height,32);
 			var material = new THREE.MeshLambertMaterial( {color: 0xffff00} );
-			var cylinder = new THREE.Mesh( geometry, material );
+			var cylinder = new THREE.Mesh(geometry, material);
 			scene.add(cylinder);
+		}
 
-			camera.position.z = 5;
+		var animar = function () {
+			requestAnimationFrame(animar);
+			renderizador.render(cena,camera);
+		};
 
-			var animate = function () {
-				requestAnimationFrame( animate );
-				controls.update();
-				renderer.render( scene, camera );
-			};
+		//Iniciar gerador
+		var renderizador = iniciarRenderizador();
 
-			animate();
+		var cena = criarCena();
+
+		var camera = criarCamera();
+
+		var controle = criarControleCamera(renderizador,camera);
+
+		//Adicionar cilindro na cena
+		criarCilindro(cena,1,0.1);
+
+		//Loop de animação
+		animar();
 </script>
 </body>
 
