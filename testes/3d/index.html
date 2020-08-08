@@ -19,10 +19,12 @@
     </div>
     <div id="editor">
     	<h1>Editor</h1>
+        <button id="adicionarPontoBaixo">Ponto Baixo</button>
         <button id="adicionarCarreira">Adicionar carreira</button>
     </div>
     <div id="receita">
     	<h1>Receita</h1>
+    	<p id="carreiras"></p>
     </div>
     <script type="module">
         //Importar biblioteca three.js
@@ -78,13 +80,13 @@
 		var controle = criarControleCamera(renderizador,camera);
 
 		//Iniciar receita
-		var carreira = 1;
+		var numeroCarreira = 1;
 		var pontoAltura = 0.1;
 		var totalPontos = 1;
 
 		//Criar cilindro
-		document.getElementById("adicionarCarreira").addEventListener("click", function(){criarCilindro(cena,totalPontos,pontoAltura);carreira ++;});
-		
+		document.getElementById("adicionarCarreira").addEventListener("click", function(){criarCilindro(cena,totalPontos,pontoAltura);numeroCarreira ++;});
+		document.getElementById("adicionarPontoBaixo").addEventListener("click",function(){document.getElementById("carreiras").innerHTML = "Carreira 1:";});
 		//Loop de animação
 		animar();
 	</script>
