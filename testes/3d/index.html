@@ -1,17 +1,28 @@
 <html>
 
 <head>
-    <title>My first three.js app</title>
+    <title>Gerador de receitas</title>
     <style>
-        body {
-        	margin: 5;
+    	#desenho{
+    		text-align: center;
+    		height: 500;
     	};
-
+    	#editor{
+    		padding: 5;
+    		background-color: yellow;
+    	};
     </style>
 </head>
 
 <body>
     <div id="desenho">
+    </div>
+    <div id="editor">
+    	<h1>Editor</h1>
+        <button id="adicionarCarreira">Adicionar carreira</button>
+    </div>
+    <div id="receita">
+    	<h1>Receita</h1>
     </div>
     <script type="module">
         //Importar biblioteca three.js
@@ -21,7 +32,7 @@
 		//Criar funções
 		function iniciarRenderizador(){
 			var renderer = new THREE.WebGLRenderer();
-			renderer.setSize(300,500);
+			renderer.setSize(window.innerWidth-20,window.innerHeight/2);
 			document.getElementById("desenho").appendChild(renderer.domElement);
 			return renderer;
 		};
@@ -36,7 +47,7 @@
 		};
 
 		function criarCamera(){
-			var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+			var camera = new THREE.PerspectiveCamera(100,1,0.1,100);
 			camera.position.set(0,1,5);
 			return camera;
 		};
@@ -57,7 +68,7 @@
 			renderizador.render(cena,camera);
 		};
 
-		//Iniciar gerador
+		//Iniciar gráficos
 		var renderizador = iniciarRenderizador();
 
 		var cena = criarCena();
@@ -66,12 +77,17 @@
 
 		var controle = criarControleCamera(renderizador,camera);
 
-		//Adicionar cilindro na cena
-		criarCilindro(cena,1,0.1);
+		//Iniciar receita
+		var carreira = 1;
+		var pontoAltura = 0.1;
+		var totalPontos = 1;
 
+		//Criar cilindro
+		document.getElementById("adicionarCarreira").addEventListener("click", function(){criarCilindro(cena,totalPontos,pontoAltura);carreira ++;});
+		
 		//Loop de animação
 		animar();
-</script>
+	</script>
 </body>
 
 </html>
