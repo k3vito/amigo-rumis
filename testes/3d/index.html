@@ -3,14 +3,19 @@
 <head>
     <title>Gerador de receitas</title>
     <style>
-    	#desenho{
+        #desenho{
+    		display: inline;
     		text-align: center;
     		height: 500;
     	};
     	#editor{
+    		display: inline;
     		padding: 5;
     		background-color: yellow;
     	};
+    	#receita{
+    		display: inline;
+    	}
     </style>
 </head>
 
@@ -18,13 +23,13 @@
     <div id="desenho">
     </div>
     <div id="editor">
-    	<h1>Editor</h1>
+        <h1>Editor</h1>
         <button id="adicionarPontoBaixo">Ponto Baixo</button>
         <button id="adicionarCarreira">Adicionar carreira</button>
     </div>
     <div id="receita">
-    	<h1>Receita</h1>
-    	<p id="carreiras"></p>
+        <h1>Receita</h1>
+        <p id="carreiras"></p>
     </div>
     <script type="module">
         //Importar biblioteca three.js
@@ -80,13 +85,30 @@
 		var controle = criarControleCamera(renderizador,camera);
 
 		//Iniciar receita
-		var numeroCarreira = 1;
+		var carreiras = [
+			{"pontos": [],"total":0},
+			{"pontos": ["pb","pb","aum"],"total":4},
+			{"pontos": ["pb","pb","pb","pb"],"total":4},
+			{"pontos": [],"total":0},
+		];
+
+		var numeroCarreira = 4;
 		var pontoAltura = 0.1;
 		var totalPontos = 1;
+		var receita = "Carreira 1: ";
 
 		//Criar cilindro
-		document.getElementById("adicionarCarreira").addEventListener("click", function(){criarCilindro(cena,totalPontos,pontoAltura);numeroCarreira ++;});
-		document.getElementById("adicionarPontoBaixo").addEventListener("click",function(){document.getElementById("carreiras").innerHTML = "Carreira 1:";});
+		document.getElementById("adicionarPontoBaixo").addEventListener("click",function(){
+			carreiras[numeroCarreira-1].pontos.push("pb");
+			carreiras[numeroCarreira-1].total ++;
+			receita = receita + " pb";
+			document.getElementById("carreiras").innerHTML = receita + " [" + carreiras[numeroCarreira-1].total + "]";
+			console.log(carreiras);
+		});
+		document.getElementById("adicionarCarreira").addEventListener("click", function(){criarCilindro(cena,totalPontos,pontoAltura)});
+
+		console.log(carreiras);
+
 		//Loop de animação
 		animar();
 	</script>
