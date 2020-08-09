@@ -25,11 +25,12 @@
     <div id="editor">
         <h1>Editor</h1>
         <button id="adicionarPontoBaixo">Ponto Baixo</button>
+        <button id="adicionarAumento">Aumento</button>
         <button id="adicionarCarreira">Adicionar carreira</button>
     </div>
     <div id="receita">
         <h1>Receita</h1>
-        <p id="carreiras"></p>
+        <p id="carreiras">Carreira 1: pb pb pb aum [4]<br>Carreira 2: pb pb pb pb [4]<br>Carreira 3: </p>
     </div>
     <script type="module">
         //Importar biblioteca three.js
@@ -92,20 +93,44 @@
 			{"pontos": [],"total":0},
 		];
 
-		var numeroCarreira = 4;
 		var pontoAltura = 0.1;
 		var totalPontos = 1;
-		var receita = "Carreira 1: ";
+		var receita = "Carreira 1: pb pb pb aum [4]<br>Carreira 2: pb pb pb pb [4]<br>Carreira 3:";
 
-		//Criar cilindro
+		//Botões do editor
 		document.getElementById("adicionarPontoBaixo").addEventListener("click",function(){
-			carreiras[numeroCarreira-1].pontos.push("pb");
-			carreiras[numeroCarreira-1].total ++;
+			carreiras[carreiras.length-1].pontos.push("pb");
+			carreiras[carreiras.length-1].total ++;
 			receita = receita + " pb";
-			document.getElementById("carreiras").innerHTML = receita + " [" + carreiras[numeroCarreira-1].total + "]";
+			document.getElementById("carreiras").innerHTML = receita + " [" + carreiras[carreiras.length-1].total + "]";
 			console.log(carreiras);
-		});
-		document.getElementById("adicionarCarreira").addEventListener("click", function(){criarCilindro(cena,totalPontos,pontoAltura)});
+			}
+		);
+
+		document.getElementById("adicionarAumento").addEventListener("click",function(){
+			carreiras[carreiras.length-1].pontos.push("aum");
+			carreiras[carreiras.length-1].total = carreiras[carreiras.length-1].total + 2;
+			receita = receita + " aum";
+			document.getElementById("carreiras").innerHTML = receita + " [" + carreiras[carreiras.length-1].total + "]";
+			console.log(carreiras);
+			}
+		);
+
+		document.getElementById("adicionarCarreira").addEventListener("click", function(){
+				criarCilindro(cena,totalPontos,pontoAltura);
+				carreiras.push({"pontos": [],"total":0});
+				console.log("Adicionando nova carreira");
+				console.log("Receita antes: " + receita);
+				console.log(carreiras[carreiras.length-2].total);
+				console.log(carreiras.length-1);
+
+				receita = receita + " [" + carreiras[carreiras.length-2].total + "]<br>Carreira " + (carreiras.length-1) + ":";
+
+				console.log("Receita depois: " + receita);
+
+				console.log(carreiras);
+			}
+		);
 
 		console.log(carreiras);
 
