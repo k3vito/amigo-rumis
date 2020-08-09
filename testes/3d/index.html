@@ -30,7 +30,7 @@
     </div>
     <div id="receita">
         <h1>Receita</h1>
-        <p id="carreiras">Carreira 1: pb pb pb aum [4]<br>Carreira 2: pb pb pb pb [4]<br>Carreira 3: </p>
+        <div id="carreiras"><p>Carreira 1: pb pb pb aum [4]</p><p>Carreira 2: pb pb pb pb [4]</p><p>Carreira 3: </p></div>
     </div>
     <script type="module">
         //Importar biblioteca three.js
@@ -47,16 +47,16 @@
 
 		function criarCena(){
 			var scene = new THREE.Scene();
-			scene.background = new THREE.Color( 0xeeeeee );
+			scene.background = new THREE.Color(0xeeeeee);
 			var spotLight = new THREE.SpotLight(0xffffff);
-			spotLight.position.set(-100, 100, 0);
+			spotLight.position.set(-10,10,10);
 			scene.add(spotLight);
 			return scene;
 		};
 
 		function criarCamera(){
-			var camera = new THREE.PerspectiveCamera(100,1,0.1,100);
-			camera.position.set(0,1,5);
+			var camera = new THREE.PerspectiveCamera(20,1,0.1,100);
+			camera.position.set(0,1,6);
 			return camera;
 		};
 
@@ -64,10 +64,11 @@
 			var controls = new OrbitControls(camera,renderer.domElement);
 		};
 
-		function criarCilindro(scene,radius,height) {
-			var geometry = new THREE.CylinderGeometry(radius,radius,height,32);
-			var material = new THREE.MeshLambertMaterial( {color: 0xffff00} );
+		function criarCilindro(scene,circumference,height,colorNumber,yPosition) {
+			var geometry = new THREE.CylinderGeometry(circumference/(2*Math.PI),circumference/(2*Math.PI),height,64);
+			var material = new THREE.MeshLambertMaterial( {color: colorNumber} );
 			var cylinder = new THREE.Mesh(geometry, material);
+			cylinder.translateY(yPosition);
 			scene.add(cylinder);
 		}
 
@@ -78,11 +79,8 @@
 
 		//Iniciar gráficos
 		var renderizador = iniciarRenderizador();
-
 		var cena = criarCena();
-
 		var camera = criarCamera();
-
 		var controle = criarControleCamera(renderizador,camera);
 
 		//Iniciar receita
@@ -94,8 +92,13 @@
 		];
 
 		var pontoAltura = 0.1;
-		var totalPontos = 1;
-		var receita = "Carreira 1: pb pb pb aum [4]<br>Carreira 2: pb pb pb pb [4]<br>Carreira 3:";
+		var cinza = 0xffffff;
+		var verde = 0x00ff00;
+		var verdeClaro = 0xaaffaa;
+		var receita = "<p>Carreira 1: pb pb pb aum [4]</p><p>Carreira 2: pb pb pb pb [4]</p><p>Carreira 3:";
+
+		criarCilindro(cena,4,pontoAltura,cinza,0);
+		criarCilindro(cena,4,pontoAltura,verdeClaro,0.1);
 
 		//Botões do editor
 		document.getElementById("adicionarPontoBaixo").addEventListener("click",function(){
@@ -115,9 +118,9 @@
 		);
 
 		document.getElementById("adicionarCarreira").addEventListener("click", function(){
-				criarCilindro(cena,totalPontos,pontoAltura);
+				criarCilindro(cena,carreiras[carreiras.length-1].total,pontoAltura,verde,pontoAltura*(carreiras.length-2));
 				carreiras.push({"pontos": [],"total":0});
-				receita = receita + " [" + carreiras[carreiras.length-2].total + "]<br>Carreira " + (carreiras.length-1) + ":";
+				receita = receita + " [" + carreiras[carreiras.length-2].total + "]</p><p>Carreira " + (carreiras.length-1) + ":";
 				document.getElementById("carreiras").innerHTML = receita;
 			}
 		);
