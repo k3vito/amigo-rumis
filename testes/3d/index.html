@@ -70,6 +70,8 @@
 			var cylinder = new THREE.Mesh(geometry, material);
 			cylinder.translateY(yPosition);
 			scene.add(cylinder);
+			geometry.dispose();
+			material.dispose();
 		}
 
 		var animar = function () {
@@ -101,11 +103,14 @@
 		criarCilindro(cena,4,pontoAltura,verdeClaro,0.1);
 
 		//Botões do editor
+		document.getElementById("adicionarCarreira").disabled = true;
+
 		document.getElementById("adicionarPontoBaixo").addEventListener("click",function(){
 			carreiras[carreiras.length-1].pontos.push("pb");
 			carreiras[carreiras.length-1].total ++;
 			receita = receita + " pb";
 			document.getElementById("carreiras").innerHTML = receita + " [" + carreiras[carreiras.length-1].total + "]";
+			document.getElementById("adicionarCarreira").disabled = false;
 			}
 		);
 
@@ -114,6 +119,7 @@
 			carreiras[carreiras.length-1].total = carreiras[carreiras.length-1].total + 2;
 			receita = receita + " aum";
 			document.getElementById("carreiras").innerHTML = receita + " [" + carreiras[carreiras.length-1].total + "]";
+			document.getElementById("adicionarCarreira").disabled = false;
 			}
 		);
 
@@ -122,6 +128,7 @@
 				carreiras.push({"pontos": [],"total":0});
 				receita = receita + " [" + carreiras[carreiras.length-2].total + "]</p><p>Carreira " + (carreiras.length-1) + ":";
 				document.getElementById("carreiras").innerHTML = receita;
+				document.getElementById("adicionarCarreira").disabled = true;
 			}
 		);
 
