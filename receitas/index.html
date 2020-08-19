@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html amp lang="en">
 
 <head>
@@ -8,6 +8,8 @@
     <!---AMP Components--->
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
     <!---AMP Components End--->
     <link rel="canonical" href="https://k3vito.github.io/amigo-rumis/receitas">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -115,6 +117,11 @@
 
     }
 
+    header a {
+        color: black;
+        text-decoration: none;
+    }
+
     h1,
     h2,
     h3 {
@@ -136,6 +143,10 @@
         text-decoration: none;
         display: inline-block;
         margin: 5px 5px;
+    }
+
+    button[aria-selected="true"] {
+        background: pink;
     }
 
     .tag {
@@ -182,13 +193,38 @@
     </header>
     <main>
         <h1>Receitas</h1>
+        <div class="refinador">
+            <h2>Filtrar</h2>
+            <ul class="filtros">
+                <li class="filtroDificuldade">
+                    <amp-state id="dificuldadesSelecionadas"><script type="application/json">true</script></amp-state>
+                    <amp-selector multiple class="radio-selector" on="select: AMP.setState({                    dificuldadesSelecionadas: event.selectedOptions})">
+                    Dificuldade: 
+                    <button option="Fácil" selected>Fácil</button>
+                    <button option="Médio" selected>Médio</button>
+                    <button option="Difícil" selected>Difícil</button>
+
+                    </amp-selector>
+                </li>
+            </ul>
+
+            <div [text]="dificuldadesSelecionadas.join(', ')">All selected option(s)</div>
+
+            <div [text]="dificuldadesSelecionadas[0]">All selected option(s)</div>
+
+            <div [hidden]="dificuldadesSelecionadas.includes(
+            'facil')" [text]="dificuldadesSelecionadas[0]">All selected option(s)</div>
+
         <div>
             <amp-list class="sessaoReceitaLista" load-more="auto" layout="fixed-height" width="auto" height="800" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json" reset-on-refresh="always">
                 <template type="amp-mustache">
-                    <div class="sessaoReceitaPrevia">
-                        <a href="{{url}}">
-                            <p class="receitaPreviaNome">{{nome}}</p>
-                        </a>
+                    <div class="sessaoReceitaPrevia" [hidden]="!dificuldadesSelecionadas.includes(
+            'Fácil')">
+
+            <div [hidden]="!dificuldadesSelecionadas.includes(
+            'Fácil')">{{dificuldade}}</div>
+
+                        <p class="receitaPreviaNome"><a href="{{url}}">{{nome}}</a></p>
                         <p>Dificuldade: {{dificuldade}} | Tempo: {{tempo}} horas</p>
                         <div class="sessaoTags">
                             {{#tags}}
