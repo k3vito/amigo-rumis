@@ -207,23 +207,10 @@
                     </amp-selector>
                 </li>
             </ul>
-
-            <div [text]="dificuldadesSelecionadas.join(', ')">All selected option(s)</div>
-
-            <div [text]="dificuldadesSelecionadas[0]">All selected option(s)</div>
-
-            <div [hidden]="dificuldadesSelecionadas.includes(
-            'facil')" [text]="dificuldadesSelecionadas[0]">All selected option(s)</div>
-
         <div>
             <amp-list class="sessaoReceitaLista" load-more="auto" layout="fixed-height" width="auto" height="800" src="https://k3vito.github.io/amigo-rumis/assets/database/receitas.json" reset-on-refresh="always">
                 <template type="amp-mustache">
-                    <div class="sessaoReceitaPrevia" [hidden]="!dificuldadesSelecionadas.includes(
-            'Fácil')">
-
-            <div [hidden]="!dificuldadesSelecionadas.includes(
-            'Fácil')">{{dificuldade}}</div>
-
+                    <div class="sessaoReceitaPrevia" [hidden]="!dificuldadesSelecionadas.includes('Fácil')">
                         <p class="receitaPreviaNome"><a href="{{url}}">{{nome}}</a></p>
                         <p>Dificuldade: {{dificuldade}} | Tempo: {{tempo}} horas</p>
                         <div class="sessaoTags">
